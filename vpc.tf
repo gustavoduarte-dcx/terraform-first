@@ -48,10 +48,6 @@ resource "aws_nat_gateway" "nat_gw" {
 
 resource "aws_eip" "nat" {}
 
-#output "vpc_id" {
-#  value = aws_vpc.main.id
-#}
-
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
    tags = {
