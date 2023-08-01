@@ -48,9 +48,9 @@ resource "aws_nat_gateway" "nat_gw" {
 
 resource "aws_eip" "nat" {}
 
-output "vpc_id" {
-  value = aws_vpc.main.id
-}
+#output "vpc_id" {
+#  value = aws_vpc.main.id
+#}
 
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id
@@ -89,7 +89,7 @@ resource "aws_route_table_association" "private" {
   subnet_id      = aws_subnet.private[count.index].id
   route_table_id = aws_route_table.private.id
 }
-
+/*
 output "public_subnet_ids" {
   value = aws_subnet.public[*].id
 }
@@ -97,3 +97,4 @@ output "public_subnet_ids" {
 output "private_subnet_ids" {
   value = aws_subnet.private[*].id
 }
+*/
