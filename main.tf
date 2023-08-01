@@ -17,7 +17,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      owner      = "gustavo"
+      owner      = "morpheus"
       managed-by = "terraform"
     }
 
