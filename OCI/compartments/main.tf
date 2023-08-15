@@ -14,7 +14,8 @@ terraform {
 provider "oci" {
   tenancy_ocid = var.tenancy_ocid
   user_ocid = var.user_ocid 
-  private_key_path = var.private_key_path
+  #private_key_path = var.private_key_path
+  private_key_path = file("/home/opc/.ssh/terraform_2023-08-15T13_26_52.941Z.pem")
   fingerprint = var.fingerprint
   region = var.region
 }
